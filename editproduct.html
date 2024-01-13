@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit product</title>
+    <script src="dist/js/editproduct.js" defer></script>
+    <link href="dist/output.css" rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-green-200">
+    <section class="container mb-16">
+        <div class="flex justify-center flex-col py-6">
+            <h1 class="text-center font-bold text-5xl text-primary flex flex-col">Edit Product</h1>
+            <span class="iconify text-7xl mx-auto text-primary" data-icon="line-md:edit-twotone-full"></span>
+        </div>
+        <div class="border-primary border-4 bg-white w-2/3 sm:w-2/3 md:w-1/2 lg:w-1/3 rounded-3xl mx-auto">
+            <form onsubmit="editProduct();return false">
+                <div class="flex flex-col">
+                    <!-- tittle -->
+                    <div class="py-2 px-7">
+                        <label class="mb-2 block text-2xl text-center font-bold text-primary" for="title">Product
+                            Name</label>
+                        <input
+                            class="w-full rounded-xl border-primary placeholder:text-primary placeholder:font-semibold focus:text-primary border-2 bg-slate-200 p-3 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                            type="text" name="title" placeholder="Name . . .">
+                    </div>
+                    <!-- thumbnail -->
+                    <div class="py-2 px-7">
+                        <label class="mb-2 block text-2xl text-center font-bold text-primary" for="images">Product
+                            Image</label>
+                        <input
+                            class="border-2 border-primary bg-slate-200 rounded-xl w-full py-2 px-3 text-primary focus:outline-none"
+                            type="file" name="images">
+                    </div>
+                    <!-- Description -->
+                    <div class="py-2 px-7">
+                        <label class="mb-2 block text-2xl text-center font-bold text-primary" for="description">Product
+                            Description</label>
+                        <textarea name="description"
+                            class="w-full bg-slate-200 border-primary border-2 p-3 rounded-xl placeholder:text-primary placeholder:font-semibold focus:outline-none focus:ring-primary focus:ring-1 focus:text-primary h-32 "
+                            placeholder="Description . . ."></textarea>
+                    </div>
+                    <!-- price -->
+                    <div class="py-2 px-7">
+                        <label class="mb-2 block text-2xl text-center font-bold text-primary" for="price">Product
+                            Price</label>
+                        <input
+                            class="w-full rounded-xl border-primary placeholder:text-primary placeholder:font-semibold focus:text-primary border-2 bg-slate-200 p-3 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                            type="number" name="price" placeholder="Price . . .">
+                    </div>
+                    <div class="flex justify-center py-5 gap-5">
+                        <button><a
+                                class="text-primary font-bold border-primary border-2 text-1xl text-center rounded-3xl py-3 px-6 hover:bg-primary hover:text-white"
+                                href="./index.html">Back</a></button>
+                        <button
+                            class="text-primary font-bold border-primary border-2 text-1xl text-center rounded-3xl py-3 px-6 hover:bg-primary hover:text-white">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
